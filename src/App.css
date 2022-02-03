@@ -1,11 +1,16 @@
 @import url("bootstrap/dist/css/bootstrap.min.css");
+html {
+  background-color: crimson;
+}
+
 .root {
-  background-color: cadetblue;
+  background-color: crimson;
 }
 .container {
   margin-top: 10vh;
   background-color: grey;
   height: 80vh;
+  width: 80vw;
   border-radius: 30px;
   opacity: 80%;
   display: flex;

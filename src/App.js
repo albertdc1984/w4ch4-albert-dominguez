@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="row col-12">
+        <div className="row col-10">
           <FirstForm />
           <SecondForm />
           <ThirdForm />
