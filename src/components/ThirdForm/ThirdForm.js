@@ -1,6 +1,12 @@
+import FormContext from "../../Contexts/FormContext";
+import { useContext } from "react";
+import Button from "../Button/Button";
+
 const ThirdForm = () => {
+  const { restNumber } = useContext(FormContext);
+
   return (
-    <form className="third-form d-none">
+    <form className="third-form d-flex">
       <label htmlFor="user">Username</label>
       <input className="form-control" type="text" id="user"></input>
       <label htmlFor="password">Password</label>
@@ -9,8 +15,16 @@ const ThirdForm = () => {
         <input className="check" type="checkbox" id="remember"></input>
         <label htmlFor="remember">Remember Password</label>
       </div>
-      <button className="submit-button prev">Previous</button>
-      <button className="submit-button next">Next</button>
+      <div className="button-container">
+        <Button
+          text="previous"
+          actionOnCLick={(event) => {
+            event.preventDefault();
+            restNumber();
+          }}
+        />
+        <Button text="next" />
+      </div>
     </form>
   );
 };
