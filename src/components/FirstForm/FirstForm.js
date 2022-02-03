@@ -1,4 +1,10 @@
+import Button from "../Button/Button";
+import FormContext from "../../Contexts/FormContext";
+import { useContext } from "react";
+
 const FirstForm = () => {
+  const { changeNumber } = useContext(FormContext);
+
   return (
     <form className="first-form d-flex">
       <label htmlFor="name">Name</label>
@@ -9,7 +15,13 @@ const FirstForm = () => {
       <input className="form-control" type="date" id="birth"></input>
       <label htmlFor="email">E-mail</label>
       <input className="form-control" type="email" id="email"></input>
-      <button className="submit-button next">Next</button>
+      <Button
+        text="next"
+        actionOnClick={(event) => {
+          event.preventDefault();
+          changeNumber();
+        }}
+      />
     </form>
   );
 };

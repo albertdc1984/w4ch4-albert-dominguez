@@ -1,18 +1,24 @@
 @import url("bootstrap/dist/css/bootstrap.min.css");
 html {
-  background-color: crimson;
+  background-color: white;
 }
 
 .root {
-  background-color: crimson;
+  background-color: white;
+}
+h1 {
+  color: crimson;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 6vh;
 }
 .container {
-  margin-top: 10vh;
-  background-color: grey;
-  height: 80vh;
-  width: 80vw;
+  margin-top: -3vh;
+  background-color: crimson;
+  color: white;
+  height: 60vh;
+  width: 50vw;
   border-radius: 30px;
-  opacity: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,16 +34,22 @@ form {
   border-radius: 20px;
 }
 button {
+  display: flex;
+  justify-content: center;
+
   border-radius: 20px;
-  background-color: darkcyan;
-  margin: 10px;
-  width: 30vw;
+  background-color: maroon;
+  color: white;
+  font-weight: bolder;
+  border-style: none;
+  margin: 40px;
+  width: auto;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .checkbox-area {
   margin: 10px;
-}
-.check {
-  width: auto;
-  height: auto;
 }
